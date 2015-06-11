@@ -1,0 +1,45 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view ng-cloak>
+  <ion-nav-title ng-bind-html="movie | movieTitleYear"></ion-nav-title>
+  <ion-content class="padding">
+
+    <style type="text/css">
+      .spinner > svg { width: 120px; height: 120px; }
+    </style>
+    <ion-spinner ng-show="loading" icon="android" class="col col-center" style="text-align: center"></ion-spinner>
+    <h4 ng-show="loading" style="text-align: center; color: gray">
+      Fetching omdbapi.com ...
+      <br/><br/>
+      <a href="#" ng-click="refresh()" ng-show="showForceRefresh" class="button button-positive" style="text-align: center; margin: 0 auto; width: 150px">Force Refresh</a>
+    </h4>
+
+    <div class="list card" ng-hide="loading">
+      <div class="item item-body">
+        <div class="row">
+          <div class="col col-33"><img ng-src="{{movie.Poster}}" style="width: 100%; height: auto"/></div>
+          <div class="col">{{movie.Plot}}</div>
+        </div>
+        <p>
+          <a href="#" class="subdued">Director: {{movie.Director}}</a>
+          <a href="#" class="subdued"><i class="icon ion-clock"></i> {{movie.Runtime}}</a>
+        </p>
+        <p>
+          <a href="#" class="subdued">Actors: {{movie.Actors}}</a>
+        </p>
+        <p>
+          <a href="#" class="subdued" style="font-size: 1.4em">IMDb: <span ng-bind-html="movie.imdbRating | rating"></span> <span ng-bind-html="movie.imdbRating"></span> (<span ng-bind-html="movie.imdbVotes"></span> votes)</a>
+        </p>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" ng-click="recall()">
+          <i class="icon ion-plus-circled"></i>
+          Recall
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

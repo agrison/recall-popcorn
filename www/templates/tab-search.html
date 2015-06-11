@@ -1,0 +1,40 @@
+<ion-view>
+  <ion-nav-title>Find a movie</ion-nav-title>
+  <ion-content>
+    <ion-list>
+      <div class="list list-inset">
+        <label class="item item-input" style="border: none; font-size: 2.5em; margin: 0; padding: 0; padding-left: 15px">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" id="title" ng-model="title" ng-change="delay(search, 500)" placeholder="Search..." style="font-size: 1em; height: 45px; line-height: 45px"/>
+        </label>
+      </div>
+      <style type="text/css">
+        .spinner > svg { width: 120px; height: 120px; }
+        .left-side { width: 70px; float: left; }
+      </style>
+      <ion-spinner ng-show="loading" icon="android" class="col col-center" style="text-align: center"></ion-spinner>
+      <h4 ng-show="loading" style="text-align: center; color: gray">
+        Fetching omdbapi.com ...
+        <br/><br/>
+        <a href="#" ng-click="search()" ng-show="showForceRefresh" class="button button-positive" style="text-align: center; margin: 0 auto; width: 150px">Force Refresh</a>
+      </h4>
+
+      <div ng-hide="loading" class="item item-icon-right" ng-repeat="movie in movies">
+        <div class="left-side">
+          <button class="button button-clear button-positive" ng-click="quickAdd(movie)" style="text-align: center"><i class="icon ion-plus-circled"></i></button>
+        </div>
+        <div class="right-side" ng-click="window.location.href='#/tab/search/{{movie.imdbID}}'">
+          <a href="#/tab/search/{{movie.imdbID}}" style="text-decoration: none">
+            <h2 style="margin-top: 15px"><span style="color: rgb(56, 126, 245)">{{movie.Title}}</span> ({{movie.Year}})</h2>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </a>
+        </div>
+      </div>
+      <!--ion-item ng-hide="loading" class="item-remove-animate item-avatar item-icon-right" ng-repeat="movie in movies" type="item-text-wrap" href="#/tab/search/{{movie.imdbID}}">
+        <button class="button button-positive" style="margin-left: -50px; text-align: center"><i class="icon ion-plus-circled"></i></button>
+        <h2 style="margin-left: 20px; margin-top: -30px"><span style="color: rgb(56, 126, 245)">{{movie.Title}}</span> ({{movie.Year}})</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item-->
+    </ion-list>
+  </ion-content>
+</ion-view>
