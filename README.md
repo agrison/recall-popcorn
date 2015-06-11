@@ -21,22 +21,22 @@ Movie information comes from IMDb via the use of the REST API at omdbapi.com
 
 ### Screenshots
 
-**Dashboard**
+#### Dashboard
 ![dashboard](https://raw.githubusercontent.com/agrison/recall-popcorn/master/screenshots/dashboard.png)
 
-**Search**
+#### Search for The Godfather
 ![dashboard](https://raw.githubusercontent.com/agrison/recall-popcorn/master/screenshots/search.png)
 
-**Search detail**
+#### Search detail
 ![dashboard](https://raw.githubusercontent.com/agrison/recall-popcorn/master/screenshots/search-detail.png)
 
-**Dashboard updated after adding The Godfather**
+#### Dashboard updated after adding The Godfather
 ![dashboard](https://raw.githubusercontent.com/agrison/recall-popcorn/master/screenshots/dashboard-updated.png)
 
-**Dashboard Action Call on The Godfather**
+#### Dashboard Action Call on The Godfather
 ![dashboard](https://raw.githubusercontent.com/agrison/recall-popcorn/master/screenshots/dashboard-action-call.png)
 
-**Dashboard detail on the Godfather**
+#### Dashboard detail on the Godfather
 ![dashboard](https://raw.githubusercontent.com/agrison/recall-popcorn/master/screenshots/dashboard-detail.png)
 
 Cheers!
