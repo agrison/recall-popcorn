@@ -2,4 +2,6 @@ This is an ionic application whose goal is to recall movies you wanted to see bu
 
 It searches for movies on IMDB via OMDBAPI.
 
+Download then: `ionic run android` or `ionic run ios`
+
 Cheers!
