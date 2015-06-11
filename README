@@ -1,9 +1,0 @@
-This is an ionic application whose goal is to recall movies you wanted to see but didn't.
-
-It searches for movies on IMDB via OMDBAPI.
-
-Download then: `ionic run android` or `ionic run ios`
-
-Splashscreen PopCorn image come from DeviantArt by natalia-factory: http://www.deviantart.com/art/Pop-Corn-84989054
-
-Cheers!
