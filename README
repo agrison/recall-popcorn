@@ -1,0 +1,5 @@
+This is an ionic application whose goal is to recall movies you wanted to see but didn't.
+
+It searches for movies on IMDB via OMDBAPI.
+
+Cheers!
